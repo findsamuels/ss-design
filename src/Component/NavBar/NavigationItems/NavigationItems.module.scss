@@ -1,0 +1,17 @@
+@import '../../../Scss/main.module.scss';
+
+.NavigationItems{
+    display: flex;
+    
+    justify-content: space-between;
+    align-items: center;
+
+   
+}
+
+
+    @include respond(tablet){
+ .NavigationItems{
+  display: none;
+        }
+}

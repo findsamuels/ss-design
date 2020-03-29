@@ -1,0 +1,22 @@
+@import '../../../Scss/main.module.scss';
+
+.SideNavItem{
+    list-style: none;
+    padding: 2rem 0;
+
+    &:not(:last-child){
+ @include borderBottom(.1rem, $color-grey)
+    }
+   
+     a{
+color: $color-white ;
+font-weight: bold;
+&:hover{
+    text-decoration: none;
+    list-style: none ;
+     color: $color-grey ;
+      @include borderBottom(.1rem, $color-grey)
+}
+    }
+}
+

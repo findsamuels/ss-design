@@ -1,0 +1,58 @@
+@import '../../Scss/main.module.scss';
+
+.PortfolioList{
+    
+   margin: 0 auto;
+width: 80%;
+
+@include respond(phone){
+width: 100%;
+}
+}
+
+.PortfolioItems{
+padding: 1rem 0;
+border: none;
+padding-top:  1rem ;
+
+transition: all .2s ease-in-out;
+    li{
+        list-style: none;
+    }
+}
+
+.portfolioContent{
+    width: 100%;
+    text-align: start;
+    
+}
+
+
+
+.imageOverLay{
+
+display: block;
+height: 100%;
+color: $color-white;
+padding-bottom: 1rem;
+
+}
+.Img{
+width: 100%;
+cursor: pointer;
+
+z-index: 99;
+}
+a:hover{
+    border: none;
+    outline: none;
+}
+
+.TitleDiv{
+   margin-top: 1rem;
+    padding: 0 1rem;
+    width: 100%;
+   font-style: italic;
+}
+
+

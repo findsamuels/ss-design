@@ -1,0 +1,41 @@
+@import '../../Scss/main.module.scss';
+
+.NavBar{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    color: $color-white;
+    padding: 0 1rem;
+    height: 5rem;
+    z-index: 198;
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+    align-items: center;
+}
+
+.ScrolledNavBar{
+
+background-color: $color-darkBlue;
+// @include borderBottom(.1rem, $color-grey);
+@include boxShadow(.1rem, .2rem, $color-black);
+
+}
+.PortFolioNav{
+
+background-color: $color-darkBlue;
+// @include borderBottom(.1rem, $color-grey);
+@include boxShadow(.1rem, .2rem, $color-black);
+
+}
+
+.IconContainer{
+    display: none;
+    font-size: 4rem;
+}
+
+@include respond(tablet){
+    .IconContainer{
+    display: block;
+}
+}

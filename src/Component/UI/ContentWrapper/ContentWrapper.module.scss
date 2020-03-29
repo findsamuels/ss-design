@@ -1,0 +1,20 @@
+@import '../../../Scss/main.module.scss';
+
+.ContentWrapper {
+margin: 0 auto;
+box-sizing: border-box;
+padding: 0 1rem;
+}
+
+.grey{
+    background-color: $color-grey;
+    
+}
+.darkBlue{
+    background-color: $color-darkBlue;
+    
+}
+.gradient{
+     background-image: linear-gradient(to right bottom, $color-blue, $color-green);
+     color: $color-white;
+}

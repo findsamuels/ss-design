@@ -1,0 +1,60 @@
+@import '../../../Scss/main.module.scss';
+
+
+.Button{
+background: transparent;
+
+    cursor: pointer;
+    font: inherit;
+    padding: 1rem ;  
+    font-weight: bold;
+    color: $color-white;
+    margin: 0 auto;
+     transition: all .3s ease-in-out;
+    outline: none;
+border: none;
+    &:hover{
+opacity: .8;
+
+
+    }
+}
+
+.Disabled{
+width: 100%;
+    cursor: not-allowed;
+     padding: 1rem; 
+    background-color: $color-grey;
+    color: $color-white;
+   
+    }
+
+
+
+.Rounded{
+    border-radius: .5rem;
+}
+
+
+.block{
+    width: 100%;
+    display: block;
+}
+
+
+.darkBlue{
+border-radius: .5rem;
+ color: $color-white;
+ background-color: $color-darkBlue;
+}
+.darkGrey{
+@include boxShadow(.2rem, .3rem, $color-grey);
+ color: $color-white;
+ background-color: $color-darkBlue;
+}
+
+.darkBlue-outline{
+ color: $color-darkBlue;
+@include boxShadow(.2rem, .3rem, $color-grey)
+
+}

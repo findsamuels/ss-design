@@ -1,0 +1,86 @@
+@import '../../../Scss/main.module.scss';
+
+.SideDrawer{
+    z-index: 300;
+    position: fixed;
+    height: 100vh;
+    right: 0;
+    top: 0;
+    overflow: scroll;
+    background-color: $color-darkGrey;
+    width: 30rem;
+   display: none;
+  
+
+}
+
+
+
+@include respond(tablet){
+.show{
+    animation: slide-in .5s ease-in-out;
+      display: block;
+}
+.hide{
+    animation: slide-out .5s ease-in-out;
+      display: block;
+}
+}
+
+
+
+
+
+.right{
+   right: 0; 
+}
+.left{
+    left: 0;
+}
+
+.SideBanner{
+    @include boxShadow(.2rem , .3rem, $color-darkGrey);
+    padding: 1rem 1rem;
+    width: 100%;
+    background-color: $color-white;
+    text-align: start;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h3{
+font-size: 2rem;
+font-weight: bold;
+color: $color-darkGrey;
+    }
+    a{
+      color: $color-darkGrey;
+    }
+}
+
+@keyframes slide-in {
+  
+    0%{
+        opacity: 0;
+      transform: translateX(100%);
+    }
+
+      100%{     
+        opacity: 1;
+   
+        
+    }
+}
+@keyframes slide-out {
+  
+    100%{
+        opacity: 0;
+      transform: translateX(-100%);
+    }
+
+      0%{     
+        opacity: 1;
+   
+        
+    }
+}

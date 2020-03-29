@@ -1,0 +1,58 @@
+@import '../../Scss/main.module.scss';
+
+.Experience{
+text-align: start;
+padding-bottom: 1rem;
+
+h1{
+    color: $color-white;
+}
+
+}
+.Date{
+    text-align: center;
+}
+
+.ExperienceBox{
+  text-align: center;
+    width: 80%;
+    margin: 0 auto;
+     
+    
+}
+.ExperienceList{
+@include boxShadow(.2rem, .3rem, $color-darkGrey);
+border-radius: 1rem 1rem 0 0 ;
+margin: 2rem auto;
+padding: 1rem ;
+width: 80%;
+align-items: center;
+color: $color-darkGrey;
+background-color: $color-white;
+}
+
+.ExperienceIcon{
+    text-align: center;
+    margin: 0 auto;
+    font-size: 10rem;
+    padding-top: 2rem;
+    
+    
+}
+
+@include respond(tablet){
+    .Date{
+      padding: 1rem 0;
+      
+        
+    }
+    .ExperienceHeader{
+ text-align: center;
+
+}
+.ExperienceList{
+
+width: 100%;
+
+}
+}

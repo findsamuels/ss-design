@@ -1,0 +1,46 @@
+@import '../../../Scss/main.module.scss';
+
+.Modal{
+    position: fixed;
+    top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+    padding: 1rem;
+    @include boxShadow(.1rem, .2rem, $color-grey);
+    width: 50%;
+    z-index: 999;
+    background-color: $color-white;
+    display: none;
+}
+.show{
+    display: block;
+}
+@include respond(tablet){
+    .Modal{
+ 
+    width: 80%;
+
+}
+}
+.Content{
+    padding: 1rem;
+    text-align: start;
+}
+
+.TitleBox{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+   
+    @include borderBottom(.1rem, $color-grey);
+}
+
+.ModalIcon{
+font-size: 2rem;
+color: $color-darkGrey;
+
+}
+.Title{
+
+}

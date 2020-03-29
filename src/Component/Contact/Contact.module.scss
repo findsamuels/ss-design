@@ -1,0 +1,49 @@
+@import '../../Scss/main.module.scss';
+
+.Contact{
+    margin: 0 auto;
+ color: $color-white;
+width: 100%;
+padding-bottom: 1rem;
+background-color: $color-darkBlue;
+
+
+}
+.ContactHead{
+     padding-top: 2rem;
+}
+.IconDiv{
+    display: flex;
+    color: $color-white;
+    margin: 3rem 0;
+   
+    justify-content: center;
+   
+}
+.Icons{
+    padding: 0 2rem;
+}
+
+.EmailHeader{
+width: 100%;
+
+    li{
+        list-style: none;
+       padding: .5rem;
+cursor: pointer;
+   
+    }
+    a{
+        
+ color: $color-white; 
+        &:hover{
+           
+            text-decoration: none;
+            
+        }
+    }
+}
+
+.Copyright{
+ 
+}

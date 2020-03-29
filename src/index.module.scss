@@ -1,0 +1,33 @@
+
+@import './Scss/main.module.scss';
+
+html{
+  font-size: 62.5%;
+   scroll-behavior: smooth;
+}
+h1{
+  font-size: 3rem;
+  padding: 1rem 0;
+}
+
+h1,h2,h3,h4,h5{
+  font-family: 'Roboto', sans-serif;
+  
+}
+
+
+body {
+  margin: 0;
+     line-height: 2.5rem;
+  -webkit-font-smoothing: antialiased;
+font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+color: #2e2e2e;
+  -moz-osx-font-smoothing: grayscale;
+ font-size: 1.8rem;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

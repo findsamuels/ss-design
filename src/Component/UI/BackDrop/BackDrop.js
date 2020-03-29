@@ -1,0 +1,35 @@
+import React from 'react'
+import { connect } from 'react-redux'
+import classes from './BackDrop.module.scss'
+
+const backDrop = (props) => {
+
+    let backDropClass = [classes.BackDrop]
+    if(props.showDrawer){
+        backDropClass = [
+            classes.BackDrop,
+            classes.showDrawerBackdrop
+        ].join(' ')
+    }
+
+    if (props.showModal) {
+        backDropClass = [
+            classes.BackDrop,
+            classes.showModalBackdrop
+        ].join(' ')
+    }
+
+    return(
+        <div onClick={props.clicked} className={backDropClass}></div>
+    )
+}
+
+const mapStateToProps = state => {
+    return {
+        showDrawer: state.uiReducer.showDrawer,
+           showModal: state.uiReducer.showModal
+    }
+}
+
+
+export default connect(mapStateToProps, null)(backDrop)

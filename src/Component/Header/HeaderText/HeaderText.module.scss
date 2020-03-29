@@ -1,0 +1,30 @@
+@import '../../../Scss/main.module.scss';
+
+.HeaderText{
+padding: 1rem 3rem;
+color: $color-white;
+text-align: center;
+}
+
+
+.Heading2{
+font-size: 6rem;
+
+}
+.Description{
+font-size: 5rem;
+text-transform: uppercase;
+}
+
+@include respond(tablet){
+
+    .HeaderText{
+
+}
+.Heading2{
+font-size: 4rem;
+
+
+}
+
+}

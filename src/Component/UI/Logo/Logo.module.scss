@@ -1,0 +1,28 @@
+@import '../../../Scss/main.module.scss';
+
+.Logo{
+cursor: pointer;
+
+&:hover{
+    text-decoration: none;
+    color: $color-grey;
+}
+
+}
+
+.white{
+color: $color-white;
+}
+.darkGrey{
+color: $color-darkGrey;
+}
+.sm{
+font-size: 2rem;
+}
+.lg{
+font-size: 4rem;
+}
+.md{
+font-size: 3rem;
+}
+

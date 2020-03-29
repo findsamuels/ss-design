@@ -1,0 +1,25 @@
+@import '../../../../Scss/main.module.scss';
+
+.NavigationItem{
+list-style: none;
+padding: 0 1rem;
+
+
+ &:hover{
+     
+    
+        @include borderBottom(.1rem, $color-grey)
+    }
+
+    a{
+color: $color-white ;
+ font-size: 2rem;
+&:hover{
+    text-decoration: none;
+    list-style: none ;
+     color: $color-grey ;
+    
+}
+    }
+}
+

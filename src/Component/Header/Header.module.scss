@@ -1,0 +1,21 @@
+@import '../../Scss/main.module.scss';
+
+.Header{
+    margin: 0 auto;
+    width: 100%;
+    height: 100vh;
+   background-position: center;
+   background-color: $color-darkGrey;
+   
+    background-size: cover;
+    
+
+}
+.Overlay{
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+display: flex;
+    align-items: center;
+    justify-content: center;
+}

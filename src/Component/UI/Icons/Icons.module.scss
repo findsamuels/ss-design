@@ -1,0 +1,72 @@
+@import '../../../Scss/main.module.scss';
+
+.FontAwesomeIcon{
+cursor: pointer;
+transition: all .3s ease-in-out;
+color: transparent;
+
+&:hover{
+    opacity: .8;
+}
+}
+
+.xs{
+font-size: 1rem;
+}
+
+.sm{
+font-size: 2rem;
+}
+
+.md{
+    font-size: 3rem;
+}
+
+.mdResponsive{
+    font-size: 3rem;
+}
+@include respond(tablet){
+    .mdResponsive{
+    font-size: 2rem;
+}
+}
+
+.lg{
+    font-size: 4rem;
+}
+.xl{
+    font-size: 6rem;
+}
+.xxl{
+    font-size: 10rem;
+}
+
+.white{
+color: $color-white;
+}
+.darkGrey{
+color: $color-darkGrey;
+}
+
+.darkBlue{
+    color: $color-darkBlue;
+}
+
+.orange{
+color: $color-orange;
+}
+.green{
+   color: $color-green;
+}
+.blue{
+  color:   $color-blue;
+}
+
+.left{
+    display: flex;
+    align-self: center;
+    justify-self: left;
+}
+.leftRight{
+    margin: 0 .5rem;
+}
