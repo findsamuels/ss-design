@@ -1,13 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import classes from './NavigationItems.module.scss'
 import NavigationItem from './NavigationItem/NavigationItem'
 
-const navigationItems = (props) => {
+const NavigationItems = (props) => {
 
+    const [navItems, setNavItems] = useState({
 
-
-    const navItems = {
-        
         about: {
             value: 'About',
             path: '/',
@@ -26,23 +24,20 @@ const navigationItems = (props) => {
             name: 'skills'
 
         },
-       
-        
         myWork: {
             value: 'My Work',
             path: "/portfolio",
             name: 'mywork'
 
         },
-       
+
         contact: {
             value: 'Contact',
             path: '/',
             name: 'contact'
 
         },
-
-    }
+    })
 
     let navArray = []
     for (let nav in navItems) {
@@ -63,4 +58,4 @@ const navigationItems = (props) => {
     )
 }
 
-export default navigationItems
+export default NavigationItems

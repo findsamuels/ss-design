@@ -1,25 +1,30 @@
-import React, {Component} from 'react'
+import React from 'react'
 import classes from './NavigationItem.module.scss'
 import {NavLink} from 'react-router-dom'
-import {connect} from 'react-redux'
-class NavigationItem extends Component {
+import {useSelector} from 'react-redux'
+const NavigationItem = (props) => {
 
-    scrollToComponent = (name) => {
+    const aboutRef = useSelector( state => state.contentReducer.aboutRef)
+    const skillRef = useSelector(state => state.contentReducer.skillRef)
+    const experienceRef = useSelector(state => state.contentReducer.experienceRef)
+    const contactRef = useSelector(state => state.contentReducer.contactRef)
+    
+    const scrollToComponent = (name) => {
  switch (name) {
       case 'about':
-        this.props.aboutRef.current.scrollIntoView()
+         aboutRef.current.scrollIntoView()
         
         break;
      case 'experience':
-         this.props.skillRef.current.scrollIntoView()
+         skillRef.current.scrollIntoView()
         break;
      case 'skills':
-         this.props.experienceRef.current.scrollIntoView({
+         experienceRef.current.scrollIntoView({
              bahaviour: 'smooth'
          })
         break;
      case 'contact':
-         this.props.contactRef.current.scrollIntoView()
+         contactRef.current.scrollIntoView()
          break;
 
       default:
@@ -29,23 +34,15 @@ class NavigationItem extends Component {
         
     }
 
-render(){
+
     return (
-        <li onClick={() => this.scrollToComponent(this.props.names)} className={classes.NavigationItem}>
-            <NavLink className={classes.NavigationLink} to={this.props.link} exact={this.props.exact} >{this.props.children}</NavLink>
+        <li onClick={() => scrollToComponent(props.names)} className={classes.NavigationItem}>
+            <NavLink className={classes.NavigationLink} to={props.link} exact={props.exact} >{props.children}</NavLink>
         </li>
     )
-}
+
    
 }
-const mapStateToProps = state => {
-    return{
-        aboutRef: state.uiReducer.aboutRef,
-        experienceRef: state.uiReducer.experienceRef,
-        skillRef: state.uiReducer.skillRef,
-        contactRef: state.uiReducer.contactRef
-       
-    }
-}
 
-export default connect(mapStateToProps, null)(NavigationItem)
+
+export default NavigationItem

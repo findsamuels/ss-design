@@ -1,12 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import classes from './NavBar.module.scss'
 import NavigationItems from './NavigationItems/NavigationItems'
 import Icons from '../UI/Icons/Icons'
 import Logo from '../UI/Logo/Logo'
-import {connect} from 'react-redux'
-const navBar = (props) => {
+import {useSelector} from 'react-redux'
+const NavBar = (props) => {
 
-    const icons = {
+    const scrolled = useSelector(state => state.uiReducer.scrolled)
+    const showNavItems = useSelector(state => state.uiReducer.showNavItems)
+   
+
+
+    const [icons, ] = useState({
         instagram: {
             icon: ["fab", "instagram"],
             link: "https://www.instagram.com/findsamuel/"
@@ -23,7 +28,8 @@ const navBar = (props) => {
             icon: ["fab", "github"],
             link: "https://github.com/findsamuels"
         }
-    };
+    })
+  
         
     let navClass = [
         classes.NavBar
@@ -31,7 +37,7 @@ const navBar = (props) => {
 let navItemTypes = ''
 let IconArray = []
 
-if(props.showNavItems){
+if(showNavItems){
     navItemTypes = (
         <React.Fragment>
             <NavigationItems />
@@ -41,7 +47,7 @@ if(props.showNavItems){
         </React.Fragment>
     )
 }
-    if (!props.showNavItems) {
+    if (!showNavItems) {
         navClass = [
             classes.PortFolioNav,
             classes.NavBar
@@ -68,7 +74,7 @@ if(props.showNavItems){
         )
     }
 
-    if(props.scrolled){
+    if(scrolled){
         navClass = [
             classes.ScrolledNavBar,
             classes.NavBar
@@ -86,11 +92,6 @@ if(props.showNavItems){
 }
 
 
-const mapStateToProps = state => {
-    return{
-        scrolled: state.uiReducer.scrolled,
-        showNavItems: state.uiReducer.showNavItems
-    }
-}
 
-export default connect(mapStateToProps, null)(navBar)
+
+export default NavBar

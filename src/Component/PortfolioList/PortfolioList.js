@@ -3,6 +3,7 @@ import classes from './PortfolioList.module.scss'
 import {Row, Col, Card} from 'react-bootstrap'
 import Modal from '../UI/Modal/Modal'
 import {connect} from 'react-redux'
+import LazyLoad from 'react-lazyload'
 import ContentWrapper from '../../Component/UI/ContentWrapper/ContentWrapper'
 import Button from '../UI/Button/Button'
 import * as actionCreators from '../../Store/actions/index'
@@ -22,6 +23,7 @@ class PortfolioList extends Component {
                 link: 'https://vueproject-aa050.firebaseapp.com/',
                 
             },
+       
             fsSchedule: {
                 img: "../img/fss.png",
                 title: 'Fs-Schedule',
@@ -102,29 +104,33 @@ class PortfolioList extends Component {
             previewButtons = <Button color='darkBlue-outline' clicked={() => this.onGetPortfolio(myPortfolio.config.title, myPortfolio.config.description, myPortfolio.config.link)} >Preview Site</Button> 
             
             return (
-                <Col key={myPortfolio.id} md='4' >
 
-                  
-                    <Card className={classes.PortfolioItems}>
-                        
-                        <div onMouseEnter={this.mouseEnterImage} onMouseLeave={this.mouseLeaveImage} className={classes.imageOverLay}>
+                <LazyLoad >
+                    <Col key={myPortfolio.id} md='4' >
 
-                            <Card.Img onClick={() => this.onGetPortfolio(myPortfolio.config.title, myPortfolio.config.description, myPortfolio.config.link, myPortfolio.config.features)} className={classes.Img} variant='top' alt={myPortfolio.config.alt} src={myPortfolio.config.img} />
 
-                        </div>
-                        <Card.Body className={classes.TitleDiv}>
+                        <Card className={classes.PortfolioItems}>
 
-                            <Button color='darkBlue' btnType='block' clicked={() => this.onGetPortfolio(myPortfolio.config.title, myPortfolio.config.description, myPortfolio.config.link, myPortfolio.config.features)} >{myPortfolio.config.title}</Button>
+                            <div onMouseEnter={this.mouseEnterImage} onMouseLeave={this.mouseLeaveImage} className={classes.imageOverLay}>
 
-                        </Card.Body>
+                                <Card.Img onClick={() => this.onGetPortfolio(myPortfolio.config.title, myPortfolio.config.description, myPortfolio.config.link, myPortfolio.config.features)} className={classes.Img} variant='top' alt={myPortfolio.config.alt} src={myPortfolio.config.img} />
 
-                            
-                       
-                        
-                       
+                            </div>
+                            <Card.Body className={classes.TitleDiv}>
 
-                    </Card>
-                </Col>
+                                <Button color='darkBlue' btnType='block' clicked={() => this.onGetPortfolio(myPortfolio.config.title, myPortfolio.config.description, myPortfolio.config.link, myPortfolio.config.features)} >{myPortfolio.config.title}</Button>
+
+                            </Card.Body>
+
+
+
+
+
+
+                        </Card>
+                    </Col>
+                </LazyLoad>
+               
             )
 
 

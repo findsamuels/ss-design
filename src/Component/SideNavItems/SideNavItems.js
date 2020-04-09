@@ -1,38 +1,38 @@
-import React from 'react'
+import React, { useState } from 'react'
 import classes from './SideNavItems.module.scss'
 import SideNavItem from './SideNavItem/SideNavItem'
 import SideDrawer from '../UI/SideDrawer/SideDrawer'
 
-const sideNavItems = (props) => {
+const SideNavItems = (props) => {
 
-   const navItems = {
-     about: {
-       value: "About",
-       path: "/",
-       name: "about"
-     },
-     experience: {
-       value: "Experience",
-       path: "/",
-       name: "experience"
-     },
-     skills: {
-       value: "Skills",
-       path: "/",
-       name: "skills"
-     },
+  const [navItems, setNavItems] = useState({
+    about: {
+      value: "About",
+      path: "/",
+      name: "about"
+    },
+    experience: {
+      value: "Experience",
+      path: "/",
+      name: "experience"
+    },
+    skills: {
+      value: "Skills",
+      path: "/",
+      name: "skills"
+    },
 
-     myWork: {
-       value: "My Work",
-       path: "/portfolio",
-       name: "mywork"
-     },
-     contact: {
-       value: "Contact",
-       path: "/",
-       name: "contact"
-     }
-   };
+    myWork: {
+      value: "My Work",
+      path: "/portfolio",
+      name: "mywork"
+    },
+    contact: {
+      value: "Contact",
+      path: "/",
+      name: "contact"
+    }
+  })
 
     let navArray = []
     for(let nav in navItems){
@@ -58,4 +58,4 @@ const sideNavItems = (props) => {
     )
 }
 
-export default sideNavItems
+export default SideNavItems

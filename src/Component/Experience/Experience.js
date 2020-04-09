@@ -2,6 +2,7 @@ import React from 'react'
 import classes from './Experience.module.scss'
 import Icon from '../UI/Icons/Icons'
 import {Row, Col} from 'react-bootstrap'
+import LazyLoad from 'react-lazyload'
 import ContentWrapper from '../UI/ContentWrapper/ContentWrapper'
 
 const experience = (props) => {
@@ -69,17 +70,20 @@ const experience = (props) => {
 
 
     return(
-        <ContentWrapper backgroundColor='darkBlue'>
-            <div  className={classes.Experience}>
+        <LazyLoad>
+            <ContentWrapper backgroundColor='darkBlue'>
+                <div className={classes.Experience}>
 
-                <div className={classes.ExperienceBox} >
-                    <h1 ref={props.experienceRef}>EXPERIENCE</h1>
+                    <div className={classes.ExperienceBox} >
+                        <h1 ref={props.experienceRef}>EXPERIENCE</h1>
+                    </div>
+
+
+                    {experienceContainer}
                 </div>
-
-
-                {experienceContainer}
-            </div>
-      </ContentWrapper>
+            </ContentWrapper>
+        </LazyLoad>
+        
             
             
 

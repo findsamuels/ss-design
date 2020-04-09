@@ -5,5 +5,5 @@ handleScroll,
 componentRefs,
 showNavItems,
 toggleModal,
-hideModalAndDrawer
+hideModalAndDrawer,
 }from './uiActions'

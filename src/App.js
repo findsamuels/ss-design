@@ -1,16 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Layout from './Hoc/Layout/Layout'
-import Portfolio from './Container/PortFolio/Portfolio'
+import Portfolio from './pages/PortFolio/Portfolio'
 import './App.css';
-import Home from './Container/Home/Home'
+import Home from './pages/Home/Home'
 import { Switch, Route } from 'react-router-dom';
 
-class App extends Component{
+const App = () => {
 
- 
-
-
-  render(){
     return (
       <div className="App">
         <Layout >
@@ -23,7 +19,7 @@ class App extends Component{
         </Layout>
       </div>
     );
-  }
+  
   
 }
 

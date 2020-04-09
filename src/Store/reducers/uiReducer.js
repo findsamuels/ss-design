@@ -5,13 +5,11 @@ import stateUtility from '../../Util/StateUtility'
 const initialState = {
     showDrawer: false,
     scrolled: false,
-    aboutRef: '',
-    skillRef: '',
-    experienceRef: '',
-    contactRef: '',
     showNavItems: true,
     showModal: false,
 }
+
+
 
 const toggleSideDrawer = (state) => {
     return stateUtility(state, {
@@ -36,14 +34,7 @@ const handleScroll = (state, action) => {
         scrolled: action.scrolled
     })
 }
-const componentRefs =(state, action) => {
-    return stateUtility(state, {
-        aboutRef: action.aboutRef,
-        experienceRef: action.experienceRef,
-        skillRef: action.skillRef,
-        contactRef: action.contactRef
-    })
-}
+
 
 const showNavItems = (state, action) => {
     return stateUtility(state, {
@@ -59,14 +50,14 @@ export const uiReducer = (state = initialState, action) => {
             return toggleSideDrawer(state)
            case actionType.HANDLE_SCROLL:
                return handleScroll(state, action)
-               case actionType.GET_REF:
-            return componentRefs(state, action)
+              
             case actionType.SHOW_NAV_ITEMS:
                 return showNavItems(state, action)
                 case actionType.TOGGLE_MODAL:
                     return toggleModal(state)
                     case actionType.HIDE_MODAL_DRAWER:
             return hideModalAndDrawer(state)
+
 
     
         default:

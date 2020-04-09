@@ -4,3 +4,8 @@ export const TOGGLE_MODAL = 'TOGGLE_MODAL'
 export const HANDLE_SCROLL = 'HANDLE_SCROLL'
 export const GET_REF = 'GET_REF'
 export const SHOW_NAV_ITEMS = 'SHOW_NAV_ITEMS'
+
+export const ABOUT_REF = 'ABOUT_REF'
+export const SKILL_REF = 'SKILL_REF'
+export const EXPERIENCE_REF = 'EXPERIENCE_REF'
+export const CONTACT_REF = 'CONTACT_REF'
