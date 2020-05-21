@@ -7,19 +7,19 @@ const skills = (props) => {
 
     const skillContent = {
       frontEnd1: {
-        skill: ["Javascript", "Html5", "CSS3", "Bootstrap"],
+            skill: ["Es6 Javascript", "Html5", "CSS3", "Bootstrap", "SCSS"],
         className: "SkillList1",
         title: "Front End 1"
       },
 
       Complimentary: {
-        skill: ["Npm", "Git", "Firebase", "Debugging", "SCSS", "Node Js"],
+        skill: ["Npm", "Git", "Firebase", "Debugging",  "Node Js"],
         title: "Complimentary",
         className: "SkillList2"
       },
 
       frontEnd2: {
-        skill: ["React Js", "Redux", "React Hooks", "Vuejs","CSS-Modules"],
+        skill: ["React Js", "Redux", "React Hooks", "Redux-Hooks","CSS-Modules"],
         title: "Front End 2",
         className: "SkillList3"
       }

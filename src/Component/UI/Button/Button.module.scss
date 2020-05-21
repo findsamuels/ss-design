@@ -13,11 +13,7 @@ background: transparent;
      transition: all .3s ease-in-out;
     outline: none;
 border: none;
-    &:hover{
-opacity: .8;
-
-
-    }
+   
 }
 
 .Disabled{
@@ -48,13 +44,29 @@ border-radius: .5rem;
  background-color: $color-darkBlue;
 }
 .darkGrey{
-@include boxShadow(.2rem, .3rem, $color-grey);
+@include boxShadow(.1rem, .2rem, $color-darkGrey);
  color: $color-white;
- background-color: $color-darkBlue;
+ background-color: $color-darkGrey;
+
+ &:hover{
+     background-color: $color-white;
+      color: $color-darkGrey;
+ }
+}
+
+.darkGrey-outline{
+@include boxShadow(.1rem, .2rem, $color-darkGrey);
+ color: $color-darkGrey;
+ background-color: transparent;
+
+ &:hover{
+color: $color-white;
+ background-color: $color-darkGrey;
+ }
 }
 
 .darkBlue-outline{
  color: $color-darkBlue;
-@include boxShadow(.2rem, .3rem, $color-grey)
+@include boxShadow(.1rem, .2rem, $color-darkGrey);
 
 }

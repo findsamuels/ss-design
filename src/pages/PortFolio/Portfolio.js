@@ -31,7 +31,7 @@ const changeNavItems = () => {
         return(
            
                 <div className={classes.Portfolio}>
-                    <h1>PORTFOLIO</h1>
+                   
                     <PortfolioList/>
                     <Contact/>
                 </div>

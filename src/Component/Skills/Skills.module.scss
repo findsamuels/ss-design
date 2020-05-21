@@ -4,6 +4,10 @@
 
 width: 80%;
 margin: 0 auto;
+
+h1{
+    padding-top: 2rem;
+}
 }
 
 .SkillBox{
@@ -29,7 +33,7 @@ margin: 0 auto;
    padding: 1rem;
    text-align: center;
    border-radius: 2rem;
-    background-color: $color-darkBlue;
+    background-color: $color-darkGrey;
 
 }
 .lists{

@@ -1,23 +1,31 @@
 @import '../../Scss/main.module.scss';
 
 .PortfolioList{
-    
+  background-color: $color-darkGrey;
    margin: 0 auto;
-width: 80%;
+width: 100%;
 
 @include respond(phone){
 width: 100%;
 }
 }
 
+.portfolios{
+   
+    padding: 0 !important;
+}
 .PortfolioItems{
-padding: 1rem 0;
+
 border: none;
-padding-top:  1rem ;
+
 
 transition: all .2s ease-in-out;
     li{
         list-style: none;
+    }
+
+    &:hover > .TitleDiv{
+display: block;
     }
 }
 
@@ -34,13 +42,12 @@ transition: all .2s ease-in-out;
 display: block;
 height: 100%;
 color: $color-white;
-padding-bottom: 1rem;
 
 }
 .Img{
 width: 100%;
 cursor: pointer;
-
+filter: brightness(70%);
 z-index: 99;
 }
 a:hover{
@@ -49,10 +56,14 @@ a:hover{
 }
 
 .TitleDiv{
-   margin-top: 1rem;
-    padding: 0 1rem;
-    width: 100%;
-   font-style: italic;
+ 
+    padding: 1rem;
+   box-shadow: none;
+display: none;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%)
 }
 
 

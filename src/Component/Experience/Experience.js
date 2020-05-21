@@ -52,7 +52,7 @@ const experience = (props) => {
             <Col md='4' className={classes.Date}>
                 <h3> {exp.config.date}</h3>
                 <div className={classes.ExperienceIcon}>
-                    <Icon icon={exp.config.icon} color='darkBlue'></Icon>
+                    <Icon icon={exp.config.icon} color='darkGrey'></Icon>
                 </div>
                
                 </Col>
@@ -71,7 +71,7 @@ const experience = (props) => {
 
     return(
         <LazyLoad>
-            <ContentWrapper backgroundColor='darkBlue'>
+            <ContentWrapper backgroundColor='darkGrey'>
                 <div className={classes.Experience}>
 
                     <div className={classes.ExperienceBox} >

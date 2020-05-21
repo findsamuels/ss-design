@@ -16,14 +16,14 @@
 
 .ScrolledNavBar{
 
-background-color: $color-darkBlue;
+background-color: $color-darkGrey;
 // @include borderBottom(.1rem, $color-grey);
 @include boxShadow(.1rem, .2rem, $color-black);
 
 }
 .PortFolioNav{
 
-background-color: $color-darkBlue;
+background-color: $color-darkGrey;
 // @include borderBottom(.1rem, $color-grey);
 @include boxShadow(.1rem, .2rem, $color-black);
 
