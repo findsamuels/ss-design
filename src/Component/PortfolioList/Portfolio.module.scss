@@ -1,0 +1,60 @@
+@import '../../Scss/main.module.scss';
+
+
+
+.portfolios{
+    
+    padding: 0 !important;
+width: 100%;
+}
+
+
+.PortfolioItems{
+
+border: none;
+
+
+transition: all .2s ease-in-out;
+    li{
+        list-style: none;
+    }
+
+    &:hover > .TitleDiv{
+display: block;
+    }
+}
+
+.imageOverLay{
+width: 100%;
+display: block;
+height: 100%;
+color: $color-white;
+
+}
+.Img{
+width: 100%;
+min-height: 20rem;
+cursor: pointer;
+filter: brightness(70%);
+z-index: 99;
+}
+
+
+.TitleDiv{
+ 
+    padding: 1rem;
+   box-shadow: none;
+display: none;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+
+  
+}
+
+.portfolioContent{
+    width: 100%;
+    text-align: start;
+    
+}

@@ -2,7 +2,6 @@ import React from 'react'
 import classes from './Experience.module.scss'
 import Icon from '../UI/Icons/Icons'
 import {Row, Col} from 'react-bootstrap'
-import LazyLoad from 'react-lazyload'
 import ContentWrapper from '../UI/ContentWrapper/ContentWrapper'
 
 const experience = (props) => {
@@ -17,16 +16,6 @@ const experience = (props) => {
             role: 'Junior Web Developer',
             duty1: 'Successfully completed websites development projects individually and as part of a team.Used tools like Teamwork to organise and coordinate tasks',
             duty2: 'Used software’s like Joomla and WordPress to create beautiful websites.Using multiple IT Systems to complete tasks effectively'
-        },
-        emeraldContactCenter: {
-            date: 'Nov 2019 - Present',
-            employerName: 'Emerald Contact Center',
-            location: 'Waterford Business Park, Waterford Ireland',
-            
-            icon: 'hands-helping',
-            role: 'Customer Solutions Specialist ',
-            duty1: 'Maintaining high level call resolution and quality Assurance, Assisting customer with sales on promotion and setting up account, Informing customers of promotions and opportunities',
-            duty2: 'Understanding customer needs and giving customer great offers, Consistence and using the right call flow'
         },
         eishtec: {
             date: 'Nov 2016 - Nov 2019',
@@ -70,7 +59,7 @@ const experience = (props) => {
 
 
     return(
-        <LazyLoad>
+
             <ContentWrapper backgroundColor='darkGrey'>
                 <div className={classes.Experience}>
 
@@ -82,7 +71,7 @@ const experience = (props) => {
                     {experienceContainer}
                 </div>
             </ContentWrapper>
-        </LazyLoad>
+      
         
             
             

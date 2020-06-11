@@ -4,6 +4,7 @@ import About from '../../Component/About/About'
 import Experience from '../../Component/Experience/Experience'
 import Skills from '../../Component/Skills/Skills'
 import Contact from '../../Component/Contact/Contact'
+import Footer from '../../Component/Footer/Footer'
 
 import { useDispatch } from 'react-redux'
 import * as actionCreators from '../../Store/actions/index'
@@ -69,16 +70,20 @@ function Home(props) {
 
 
         return (
-        
-                <div className={classes.Home}>
-                <Header clicked={onToggleDrawer} />
-                <About aboutRef={aboutRef} />
-                <Experience experienceRef={experienceRef} />
-                <Skills skillRef={skillRef} />
-                <Contact contactRef={contactRef} />
-                </div>
+          <div className={classes.Home}>
+              <Header clicked={onToggleDrawer} />
+              {" "}
+              <About aboutRef={aboutRef} />
+
+              <Experience experienceRef={experienceRef} />
+              {" "}
+              <Skills skillRef={skillRef} />
+
+              <Contact contactRef={contactRef} />
+              <Footer/>
             
-        )
+          </div>
+        );
 
 
 

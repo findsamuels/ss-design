@@ -25,6 +25,16 @@ width: 100%;
    
     }
 
+    .btnLink{
+        
+        list-style: none;
+        color: white;
+        
+
+        &:hover{
+text-decoration: none;
+        }
+    }
 
 
 .Rounded{
@@ -47,6 +57,7 @@ border-radius: .5rem;
 @include boxShadow(.1rem, .2rem, $color-darkGrey);
  color: $color-white;
  background-color: $color-darkGrey;
+
 
  &:hover{
      background-color: $color-white;

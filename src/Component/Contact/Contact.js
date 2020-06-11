@@ -45,8 +45,8 @@ iconArray.push({
     </div>
   ));
     return (
-   
-        <div ref={props.contactRef} className={classes.Contact}>
+      <div ref={props.contactRef} className={classes.Contact}>
+        <div className={classes.contactContainer}>
           <h1 className={classes.ContactHead}>GET IN TOUCH</h1>
           <div className={classes.IconDiv}>{contactIcons}</div>
           <h4 className={classes.EmailHeader}>
@@ -61,9 +61,8 @@ iconArray.push({
               </a>
             </li>
           </h4>
-
         </div>
-     
+      </div>
     );
 }
 

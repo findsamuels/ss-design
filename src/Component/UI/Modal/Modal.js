@@ -1,7 +1,9 @@
 import React from 'react'
+import ReactDom from 'react-dom'
 import classes from './Modal.module.scss'
 import Icon from '../Icons/Icons'
 import { connect } from 'react-redux'
+import ReactMarkdown from 'react-markdown'
 const modal = (props) => {
     let modalClass = classes.Modal
 
@@ -14,18 +16,22 @@ const modal = (props) => {
     }
 
 
-    return(
-        <div className={modalClass}>
-    <div className={classes.TitleBox}>
-    <h5 className={classes.Title}>{props.title}</h5>
-    <div className={classes.ModalIcon}>
-                    <Icon icon='times' color='darkGrey'  clicked={props.clicked} />
-    </div>
-    
-    </div>
-            <div className={classes.Content}>{props.children}</div>
-</div>
-    )
+
+
+    let modalContent = (
+      <div className={modalClass}>
+        <div className={classes.TitleBox}>
+          <ReactMarkdown className={classes.Title} source={props.title} escapeHtml={false}/>
+        
+          <div className={classes.ModalIcon}>
+            <Icon icon="times" color="darkGrey" clicked={props.clicked} />
+          </div>
+        </div>
+        <div className={classes.Content}>{props.children}</div>
+      </div>
+    );
+
+    return ReactDom.createPortal(modalContent, document.getElementById('modal-hook'))
 }
 
 

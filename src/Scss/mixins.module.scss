@@ -35,6 +35,12 @@ border-bottom: $size solid $color ;
 @content;
     }
     }
+
+     @else if $breakpoint == 'large-Tablet' {
+ @media (max-width: $largeTablet){
+@content;
+    }
+    }
      @else if $breakpoint == 'largeTablet' {
  @media (min-width: $largeTablet){
 @content;

@@ -7,8 +7,12 @@ html{
 }
 h1{
   font-size: 3rem;
-  padding: 1rem 0;
 }
+
+p{
+  margin: 0 !important;
+}
+
 
 h1,h2,h3,h4,h5{
   font-family: 'Roboto', sans-serif;
@@ -30,4 +34,11 @@ color: #2e2e2e;
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.center{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

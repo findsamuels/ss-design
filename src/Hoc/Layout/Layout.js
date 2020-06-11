@@ -25,8 +25,7 @@ const Layout = (props) => {
                     <SideNavItems clicked={onToggleDrawer} />
                
                     {props.children}
-              
-                <Footer />
+
             </div>
         )
 

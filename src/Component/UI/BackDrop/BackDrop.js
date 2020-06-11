@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactDom from 'react-dom'
 import { connect } from 'react-redux'
 import classes from './BackDrop.module.scss'
 
@@ -19,9 +20,11 @@ const backDrop = (props) => {
         ].join(' ')
     }
 
-    return(
-        <div onClick={props.clicked} className={backDropClass}></div>
+    let backdropContent = (
+<div onClick={props.clicked} className={backDropClass}></div>
     )
+
+    return ReactDom.createPortal(backdropContent, document.getElementById('backdrop-hook'))
 }
 
 const mapStateToProps = state => {

@@ -4,13 +4,16 @@
     position: fixed;
     top: 50%;
    left: 50%;
+  overflow: scroll;
    transform: translate(-50%, -50%);
     padding: 1rem;
     @include boxShadow(.1rem, .2rem, $color-grey);
     width: 50%;
     z-index: 999;
+    max-height: 80%;
     background-color: $color-white;
     display: none;
+   
 }
 .show{
     display: block;
