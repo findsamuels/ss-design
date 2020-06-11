@@ -3,7 +3,6 @@ import classes from './Portfolio.module.scss'
 import Fade from 'react-reveal/Fade'
 import {Card, Col} from 'react-bootstrap'
 import Button from '../UI/Button/Button'
-
 import ReactMarkdown from 'react-markdown'
 
 const Portfolio =  props => {
@@ -22,7 +21,8 @@ const Portfolio =  props => {
                     className={classes.Img}
                     variant="top"
                     alt={title}
-                    src={portfolioImage.fields.file.url}
+                    src={
+                      portfolioImage.fields.file.url }
                   />
                 </div>
                 <Card.Body className={classes.TitleDiv}>
