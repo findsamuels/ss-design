@@ -7,9 +7,10 @@ background: transparent;
     cursor: pointer;
     font: inherit;
     padding: 1rem ;  
+    margin: 0 auto;
     font-weight: bold;
     color: $color-white;
-    margin: 0 auto;
+    
      transition: all .3s ease-in-out;
     outline: none;
 border: none;
@@ -66,9 +67,9 @@ border-radius: .5rem;
 }
 
 .darkGrey-outline{
-@include boxShadow(.1rem, .2rem, $color-darkGrey);
+
  color: $color-darkGrey;
- background-color: transparent;
+ background-color: white;
 
  &:hover{
 color: $color-white;
